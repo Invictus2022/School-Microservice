@@ -21,8 +21,18 @@ public class SchoolController {
         return schoolService.getSchool();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<SchoolModel> getSchoolByID(@PathVariable int id){
+        return schoolService.getSchoolByID(id);
+    }
+
     @PostMapping
     public ResponseEntity<String> postSchool(@RequestBody SchoolModel school){
         return schoolService.postSchool(school);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteSchool(@PathVariable("id") int id ){
+        return  schoolService.deleteSchool(id);
     }
 }

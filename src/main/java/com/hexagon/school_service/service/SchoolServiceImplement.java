@@ -8,4 +8,6 @@ import java.util.List;
 public interface SchoolServiceImplement {
     List<SchoolModel> getSchool();
     ResponseEntity<String> postSchool(SchoolModel school);
+    ResponseEntity<String> deleteSchool(int id);
+    ResponseEntity<SchoolModel> getSchoolByID(int id);
 }
