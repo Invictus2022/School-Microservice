@@ -16,9 +16,9 @@ import lombok.Setter;
 public class SchoolModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
-    private String schoolname;
-    private  String location;
+    private String Schoolname;
+    private String location;
     private String principalname;
 }
